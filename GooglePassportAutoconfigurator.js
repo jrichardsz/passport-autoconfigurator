@@ -90,7 +90,7 @@ function GooglePasssportAutoconfigurator(options, expressServer) {
       return next();
     }
 
-    // if login is valid, application continues as normal
+    // if is not athenticated, application is redirected to login
     res.redirect(options.express.loginRoute);
   }
 
@@ -98,6 +98,6 @@ function GooglePasssportAutoconfigurator(options, expressServer) {
 
 
 /**
-* Expose `PasssportAutoconfigurator`.
+* Expose `GooglePasssportAutoconfigurator`.
 */
 module.exports = GooglePasssportAutoconfigurator;
